@@ -6,6 +6,7 @@ import { Baby, Plus, Calendar, Gift, Euro, Share2 } from "lucide-react"
 import { formatCurrency } from "@/lib/utils"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
+import Navbar from "@/components/Navbar"
 
 export default async function DashboardPage() {
   const session = await auth()
@@ -32,19 +33,8 @@ export default async function DashboardPage() {
   })
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Baby className="w-8 h-8 text-pink-500" />
-            <span className="text-2xl font-bold text-gray-900">Minipouce</span>
-          </Link>
-          <div className="flex items-center gap-4">
-            <span className="text-gray-600">Bonjour, {session.user.name}</span>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <Navbar variant="minimal" showAuth={false} showCTA={false} />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
@@ -59,7 +49,7 @@ export default async function DashboardPage() {
           </div>
           <Link
             href="/creer-ma-liste"
-            className="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition font-medium inline-flex items-center gap-2"
+            className="bg-[#f79176] text-white hover:bg-[#f57f63] transition font-medium inline-flex items-center gap-2"
           >
             <Plus className="w-5 h-5" />
             Nouvelle liste
@@ -68,8 +58,8 @@ export default async function DashboardPage() {
 
         {lists.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-12 text-center">
-            <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Gift className="w-10 h-10 text-pink-500" />
+            <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Gift className="w-10 h-10 text-orange-500" />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
               Aucune liste pour le moment
@@ -79,7 +69,7 @@ export default async function DashboardPage() {
             </p>
             <Link
               href="/creer-ma-liste"
-              className="bg-pink-500 text-white px-8 py-3 rounded-full hover:bg-pink-600 transition font-medium inline-flex items-center gap-2"
+              className="bg-[#f79176] text-white hover:bg-[#f57f63] transition font-medium inline-flex items-center gap-2"
             >
               <Plus className="w-5 h-5" />
               Créer ma première liste
@@ -102,7 +92,7 @@ export default async function DashboardPage() {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-pink-600 transition">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-orange-600 transition">
                         {list.title}
                       </h3>
                       {list.babyName && (
@@ -141,7 +131,7 @@ export default async function DashboardPage() {
                           <Euro className="w-4 h-4" />
                           Cagnotte
                         </span>
-                        <span className="font-semibold text-pink-600">
+                        <span className="font-semibold text-orange-600">
                           {formatCurrency(totalContributions)}
                           {list.cagnotteGoal &&
                             ` / ${formatCurrency(list.cagnotteGoal)}`}

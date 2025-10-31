@@ -1,4 +1,4 @@
-# 🗺️ Roadmap Produit - Minipouce
+# 🗺️ Roadmap Produit - Tiny Tot
 
 ## ✅ Version 1.0 - MVP (COMPLÉTÉ)
 
@@ -95,7 +95,7 @@
   - [ ] Multi-listes
   - [ ] Thèmes premium
   - [ ] Analytics avancés
-  - [ ] Sans branding Minipouce
+  - [ ] Sans branding Tiny Tot
   - [ ] Page de paiement
 
 ## 🚀 Version 2.0 - Scale (6-8 mois)
@@ -189,10 +189,10 @@
 ## 🔮 Vision Long Terme (2-3 ans)
 
 ### Plateforme Parentalité Complète
-- [ ] **Minipouce Kids** : Suivi développement enfant
-- [ ] **Minipouce Shop** : Marketplace direct
-- [ ] **Minipouce Care** : Services garde d'enfants
-- [ ] **Minipouce Learn** : Cours parentalité
+- [ ] **Tiny Tot Kids** : Suivi développement enfant
+- [ ] **Tiny Tot Shop** : Marketplace direct
+- [ ] **Tiny Tot Care** : Services garde d'enfants
+- [ ] **Tiny Tot Learn** : Cours parentalité
 
 ### Technologies Avancées
 - [ ] IA pour recommandations

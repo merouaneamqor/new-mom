@@ -1,4 +1,4 @@
-# ✅ Checklist de Déploiement - Minipouce
+# ✅ Checklist de Déploiement - Tiny Tot
 
 ## 📋 Pré-Déploiement
 
@@ -402,7 +402,7 @@ Avant de considérer le déploiement terminé :
 
 ## 🎉 Félicitations !
 
-Si toutes les cases sont cochées, Minipouce est officiellement en production !
+Si toutes les cases sont cochées, Tiny Tot est officiellement en production !
 
 **Prochaines étapes** :
 1. Commencer l'acquisition d'utilisateurs

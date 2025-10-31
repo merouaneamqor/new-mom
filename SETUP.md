@@ -1,6 +1,6 @@
-# 🚀 Guide de Configuration - Minipouce
+# 🚀 Guide de Configuration - Tiny Tot
 
-Ce guide vous accompagne pas à pas pour configurer et déployer Minipouce.
+Ce guide vous accompagne pas à pas pour configurer et déployer Tiny Tot.
 
 ## 📋 Prérequis
 

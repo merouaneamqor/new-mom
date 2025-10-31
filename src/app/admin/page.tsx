@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import { Baby, TrendingUp, Users, Euro, ShoppingBag, Gift } from "lucide-react"
 import { formatCurrency } from "@/lib/utils"
+import Navbar from "@/components/Navbar"
 
 export default async function AdminDashboardPage() {
   const session = await auth()
@@ -60,27 +61,23 @@ export default async function AdminDashboardPage() {
   const totalRevenue = contributionRevenue + partnerRevenue
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Baby className="w-8 h-8 text-pink-500" />
-            <span className="text-2xl font-bold text-gray-900">Minipouce</span>
-            <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
-              Admin
-            </span>
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <Navbar variant="minimal" showAuth={false} showCTA={false} />
+      
+      {/* Admin Badge */}
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center gap-4">
+          <span className="text-sm bg-amber-100 text-amber-700 px-3 py-1.5 rounded-full font-medium">
+            Admin Dashboard
+          </span>
+          <Link
+            href="/dashboard"
+            className="text-gray-600 hover:text-orange-600 transition"
+          >
+            Mes listes
           </Link>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/dashboard"
-              className="text-gray-600 hover:text-pink-600 transition"
-            >
-              Dashboard
-            </Link>
-          </div>
         </div>
-      </header>
+      </div>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
@@ -95,14 +92,14 @@ export default async function AdminDashboardPage() {
 
         {/* Key Metrics */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl p-6 text-white shadow-lg">
+          <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg">
             <div className="flex items-center justify-between mb-4">
               <Euro className="w-10 h-10 opacity-80" />
               <div className="text-right">
                 <div className="text-3xl font-bold">
                   {formatCurrency(totalRevenue)}
                 </div>
-                <div className="text-pink-100 text-sm">Revenus Total</div>
+                <div className="text-orange-100 text-sm">Revenus Total</div>
               </div>
             </div>
           </div>
@@ -117,12 +114,12 @@ export default async function AdminDashboardPage() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white shadow-lg">
+          <div className="bg-gradient-to-br from-amber-500 from-[#faead9] rounded-2xl p-6 text-white shadow-lg">
             <div className="flex items-center justify-between mb-4">
               <Gift className="w-10 h-10 opacity-80" />
               <div className="text-right">
                 <div className="text-3xl font-bold">{totalLists}</div>
-                <div className="text-purple-100 text-sm">Listes</div>
+                <div className="text-amber-100 text-sm">Listes</div>
               </div>
             </div>
           </div>
@@ -142,11 +139,11 @@ export default async function AdminDashboardPage() {
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <TrendingUp className="w-6 h-6 text-pink-500" />
+              <TrendingUp className="w-6 h-6 text-orange-500" />
               Revenus par Source
             </h2>
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-pink-50 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
                 <div>
                   <div className="font-semibold text-gray-900">
                     Commissions Cagnotte
@@ -155,7 +152,7 @@ export default async function AdminDashboardPage() {
                     {totalContributions.length} contributions
                   </div>
                 </div>
-                <div className="text-xl font-bold text-pink-600">
+                <div className="text-xl font-bold text-orange-600">
                   {formatCurrency(contributionRevenue)}
                 </div>
               </div>

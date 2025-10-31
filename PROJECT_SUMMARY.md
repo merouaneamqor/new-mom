@@ -1,8 +1,8 @@
-# 📋 Résumé du Projet - Minipouce
+# 📋 Résumé du Projet - Tiny Tot
 
 ## 🎉 Vue d'Ensemble
 
-**Minipouce** est une plateforme complète de listes de naissance avec cagnotte intégrée, construite avec Next.js 16 et TypeScript.
+**Tiny Tot** est une plateforme complète de listes de naissance avec cagnotte intégrée, construite avec Next.js 16 et TypeScript.
 
 ### ✅ Statut du Projet : MVP COMPLÉTÉ
 
@@ -110,7 +110,7 @@ Contribution : 100€
 ├─ Frais Stripe : 0.30€
 └─ Net parent : 95.70€
 
-Revenu Minipouce : 4.30€
+Revenu Tiny Tot : 4.30€
 ```
 
 ### 8. Design & UX ✅
@@ -408,7 +408,7 @@ npx prisma migrate reset
 
 ## 🎯 Conclusion
 
-Le MVP de Minipouce est **complet et fonctionnel**. Toutes les fonctionnalités essentielles sont implémentées :
+Le MVP de Tiny Tot est **complet et fonctionnel**. Toutes les fonctionnalités essentielles sont implémentées :
 - ✅ Création de listes multi-marques
 - ✅ Système de cagnotte avec paiement
 - ✅ Réservations de cadeaux

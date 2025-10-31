@@ -6,6 +6,7 @@ import { Baby, Share2, Plus, Edit, Trash2, ExternalLink, Euro, Gift } from "luci
 import { formatCurrency, getShareUrl } from "@/lib/utils"
 import ShareButton from "@/components/ShareButton"
 import AddProductButton from "@/components/AddProductButton"
+import Navbar from "@/components/Navbar"
 
 export default async function ListDetailPage({
   params,
@@ -65,26 +66,27 @@ export default async function ListDetailPage({
     : 0
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/dashboard" className="flex items-center gap-2">
-            <Baby className="w-8 h-8 text-pink-500" />
-            <span className="text-2xl font-bold text-gray-900">Minipouce</span>
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
+      <Navbar variant="minimal" showAuth={false} showCTA={false} />
+      
+      {/* Action Bar */}
+      <div className="container mx-auto px-4 py-4 border-b bg-white/80 backdrop-blur-sm">
+        <div className="flex items-center justify-between">
+          <Link href="/dashboard" className="text-gray-600 hover:text-orange-600 transition inline-flex items-center gap-2">
+            ← Retour au dashboard
           </Link>
           <div className="flex items-center gap-4">
             <ShareButton url={shareUrl} title={list.title} />
             <Link
               href={`/dashboard/liste/${list.slug}/edit`}
-              className="text-gray-600 hover:text-pink-600 transition inline-flex items-center gap-2"
+              className="text-gray-600 hover:text-orange-600 transition inline-flex items-center gap-2"
             >
               <Edit className="w-5 h-5" />
               <span className="hidden sm:inline">Modifier</span>
             </Link>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
@@ -109,7 +111,7 @@ export default async function ListDetailPage({
           )}
 
           {/* Share URL */}
-          <div className="bg-pink-50 rounded-lg p-4">
+          <div className="bg-orange-50 rounded-lg p-4">
             <p className="text-sm text-gray-600 mb-2">Lien de partage :</p>
             <div className="flex items-center gap-2">
               <input
@@ -120,7 +122,7 @@ export default async function ListDetailPage({
               />
               <button
                 onClick={() => navigator.clipboard.writeText(shareUrl)}
-                className="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition text-sm font-medium"
+                className="px-4 py-2 bg-[#f79176] text-white hover:bg-[#f57f63] transition text-sm font-medium"
               >
                 Copier
               </button>
@@ -177,7 +179,7 @@ export default async function ListDetailPage({
                             </p>
                           </div>
                           <div className="text-right">
-                            <p className="text-xl font-bold text-pink-600">
+                            <p className="text-xl font-bold text-orange-600">
                               {formatCurrency(listProduct.product.price)}
                             </p>
                             <p className="text-xs text-gray-500">
@@ -209,7 +211,7 @@ export default async function ListDetailPage({
                                 href={listProduct.product.productUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xs text-pink-600 hover:text-pink-700 flex items-center gap-1"
+                                className="text-xs text-orange-600 hover:text-orange-700 flex items-center gap-1"
                               >
                                 Voir le produit
                                 <ExternalLink className="w-3 h-3" />
@@ -237,13 +239,13 @@ export default async function ListDetailPage({
             {list.cagnotteEnabled && (
               <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mb-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Euro className="w-5 h-5 text-pink-500" />
+                  <Euro className="w-5 h-5 text-orange-500" />
                   Cagnotte
                 </h3>
 
                 <div className="mb-4">
                   <div className="flex items-end justify-between mb-2">
-                    <span className="text-3xl font-bold text-pink-600">
+                    <span className="text-3xl font-bold text-orange-600">
                       {formatCurrency(totalContributions)}
                     </span>
                     {list.cagnotteGoal && (
@@ -255,7 +257,7 @@ export default async function ListDetailPage({
                   {list.cagnotteGoal && (
                     <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                       <div
-                        className="bg-gradient-to-r from-pink-500 to-purple-500 h-full transition-all duration-500"
+                        className="bg-gradient-to-r from-orange-500 to-amber-500 h-full transition-all duration-500"
                         style={{
                           width: `${Math.min(progressPercentage, 100)}%`,
                         }}
@@ -282,7 +284,7 @@ export default async function ListDetailPage({
                         <span className="text-gray-600">
                           {contribution.guestName}
                         </span>
-                        <span className="font-semibold text-pink-600">
+                        <span className="font-semibold text-orange-600">
                           {formatCurrency(contribution.amount)}
                         </span>
                       </div>
@@ -293,23 +295,23 @@ export default async function ListDetailPage({
             )}
 
             {/* Stats */}
-            <div className="bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-orange-500 from-[#faead9] rounded-2xl p-6 text-white">
               <h3 className="text-lg font-bold mb-4">Statistiques</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-pink-100">Produits</span>
+                  <span className="text-orange-100">Produits</span>
                   <span className="text-2xl font-bold">
                     {list.products.length}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-pink-100">Réservations</span>
+                  <span className="text-orange-100">Réservations</span>
                   <span className="text-2xl font-bold">
                     {list.products.filter((p) => p.status === "RESERVED").length}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-pink-100">Achetés</span>
+                  <span className="text-orange-100">Achetés</span>
                   <span className="text-2xl font-bold">
                     {list.products.filter((p) => p.status === "PURCHASED")
                       .length}

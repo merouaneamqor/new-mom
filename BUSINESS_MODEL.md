@@ -1,4 +1,4 @@
-# 💼 Modèle d'Affaires - Minipouce
+# 💼 Modèle d'Affaires - Tiny Tot
 
 ## 🎯 Vision & Mission
 
@@ -53,11 +53,11 @@
 **Exemple** :
 ```
 Contribution d'un proche : 100€
-Commission Minipouce (4%) : 4€
+Commission Tiny Tot (4%) : 4€
 Frais Stripe (~0.30€) : 0.30€
 ───────────────────────────
 Montant net pour les parents : 95.70€
-Revenu Minipouce : 4€
+Revenu Tiny Tot : 4€
 ```
 
 **Justification** :
@@ -82,15 +82,15 @@ Revenu Minipouce : 4€
 
 **Exemple** :
 ```
-Produit acheté via lien Minipouce : 150€
+Produit acheté via lien Tiny Tot : 150€
 Commission partenaire (5%) : 7.50€
-Revenu Minipouce : 7.50€
+Revenu Tiny Tot : 7.50€
 ```
 
 **Avantages** :
 - Revenu passif
 - Valorise le catalogue existant
-- Win-win-win (parents, invités, Minipouce)
+- Win-win-win (parents, invités, Tiny Tot)
 
 **Partenaires Potentiels** :
 - Amazon (4-8% selon catégorie)
@@ -114,7 +114,7 @@ Revenu Minipouce : 7.50€
 - Thèmes personnalisables
 - Logo/Branding personnalisé
 - Analytics avancés
-- Pas de branding Minipouce
+- Pas de branding Tiny Tot
 - Support prioritaire
 - Export des données
 - Intégration API
@@ -359,7 +359,7 @@ Panier moyen : 80€
 
 ## 💡 Conclusion
 
-Minipouce répond à un besoin réel du marché avec un modèle économique viable et scalable. La combinaison de :
+Tiny Tot répond à un besoin réel du marché avec un modèle économique viable et scalable. La combinaison de :
 - **Gratuit pour les utilisateurs principaux** (parents)
 - **Revenus récurrents** (commissions cagnotte)
 - **Revenus passifs** (affiliation)

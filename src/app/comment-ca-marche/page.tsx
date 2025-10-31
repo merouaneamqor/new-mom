@@ -1,221 +1,266 @@
 import Link from "next/link"
-import { Baby, Gift, UserPlus, List, Share2, Heart, Euro, CheckCircle, MousePointer, Bell, ShoppingBag, Users, Sparkles, ArrowRight } from "lucide-react"
+import { Baby, Gift, UserPlus, List, Share2, Heart, Euro, CheckCircle, MousePointer, Bell, ShoppingBag, Users, Sparkles, ArrowRight, Zap, Shield, Lock } from "lucide-react"
+import Navbar from "@/components/Navbar"
 
 export default function CommentCaMarchePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-blue-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Baby className="w-8 h-8 text-pink-500" />
-            <span className="text-2xl font-bold text-gray-900">Minipouce</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/fonctionnalites" className="text-gray-600 hover:text-pink-600 transition">
-              Fonctionnalités
-            </Link>
-            <Link href="/comment-ca-marche" className="text-pink-600 font-medium">
-              Comment ça marche
-            </Link>
-            <Link href="/tarifs" className="text-gray-600 hover:text-pink-600 transition">
-              Tarifs
-            </Link>
-            <Link href="/auth/signin" className="text-gray-600 hover:text-pink-600 transition">
-              Connexion
-            </Link>
-            <Link 
-              href="/creer-ma-liste" 
-              className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition font-medium"
-            >
-              Créer ma liste
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50/30 to-blue-50">
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-pink-100 text-pink-700 px-4 py-2 rounded-full mb-6">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Simple et intuitif</span>
+      <section className="container mx-auto px-4 py-20 text-center relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-orange-200 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-amber-200 rounded-full blur-3xl opacity-50"></div>
+        
+        <div className="max-w-4xl mx-auto relative">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 px-5 py-2.5 rounded-full mb-8 shadow-sm border border-orange-200">
+            <Sparkles className="w-5 h-5 animate-pulse" />
+            <span className="text-sm font-semibold">Simple • Intuitif • Gratuit</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Comment ça marche ?
+          <h1 className="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-[#fcead8] via-amber-300 to-blue-600 bg-clip-text text-transparent">
+              Comment ça marche ?
+            </span>
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8">
-            Créez votre liste de naissance en quelques minutes et partagez-la facilement avec vos proches
+          <p className="text-2xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+            Créez votre liste de naissance en <span className="font-bold text-orange-600">3 minutes</span> et partagez-la avec vos proches en un clic
           </p>
+          
+          <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span>Sans inscription</span>
+            </div>
+            <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span>Gratuit à vie</span>
+            </div>
+            <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-500" />
+              <span>Multi-marques</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Main Process - For Parents */}
-      <section className="container mx-auto px-4 pb-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded-full mb-4">
+      <section className="container mx-auto px-4 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#f79176] hover:bg-[#f57f63] text-white px-5 py-2.5 rounded-full mb-6 shadow-md">
               <Baby className="w-5 h-5" />
-              <span className="font-semibold">Pour les futurs parents</span>
+              <span className="font-bold">Pour les futurs parents</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-5xl font-extrabold text-gray-900 mb-4">
               En 3 étapes simples
             </h2>
+            <p className="text-xl text-gray-600">
+              De l'inscription au partage, tout se fait en quelques minutes
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-10 mb-16 relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-20 left-1/4 right-1/4 h-1 bg-gradient-to-r from-orange-200 via-blue-200 to-amber-200 -z-10"></div>
+            
             {/* Step 1 */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
-                  1
-                </div>
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center">
-                    <UserPlus className="w-10 h-10 text-pink-600" />
+            <div className="relative group">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 h-full hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-2xl flex items-center justify-center text-white text-2xl font-extrabold shadow-lg rotate-3 group-hover:rotate-6 transition-transform">
+                    1
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                  Inscrivez-vous
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Créez votre compte gratuitement en quelques secondes avec Google. 
-                  Aucune carte bancaire requise.
-                </p>
-              </div>
-              {/* Arrow */}
-              <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
-                <ArrowRight className="w-8 h-8 text-pink-400" />
+                <div className="pt-8">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <UserPlus className="w-12 h-12 text-orange-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Inscrivez-vous
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed mb-4">
+                    Créez votre compte gratuitement en quelques secondes avec Google.
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-sm text-green-600 font-medium">
+                    <Zap className="w-4 h-4" />
+                    <span>30 secondes chrono</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
-                  2
-                </div>
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
-                    <List className="w-10 h-10 text-blue-600" />
+            <div className="relative group">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 h-full hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-2xl flex items-center justify-center text-white text-2xl font-extrabold shadow-lg -rotate-3 group-hover:-rotate-6 transition-transform">
+                    2
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                  Créez votre liste
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Ajoutez vos produits préférés de n'importe quelle marque. 
-                  Activez la cagnotte si vous le souhaitez.
-                </p>
-              </div>
-              {/* Arrow */}
-              <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10">
-                <ArrowRight className="w-8 h-8 text-blue-400" />
+                <div className="pt-8">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <List className="w-12 h-12 text-blue-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Créez votre liste
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed mb-4">
+                    Ajoutez vos produits préférés de n'importe quelle marque.
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-sm text-blue-600 font-medium">
+                    <ShoppingBag className="w-4 h-4" />
+                    <span>Multi-marques illimité</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
-                3
-              </div>
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
-                  <Share2 className="w-10 h-10 text-purple-600" />
+            <div className="relative group">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 h-full hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 via-amber-300 to-amber-700 rounded-2xl flex items-center justify-center text-white text-2xl font-extrabold shadow-lg rotate-3 group-hover:rotate-6 transition-transform">
+                    3
+                  </div>
+                </div>
+                <div className="pt-8">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-24 h-24 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Share2 className="w-12 h-12 text-amber-300" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Partagez
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed mb-4">
+                    Envoyez le lien unique à vos proches en un clic.
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-sm text-amber-300 font-medium">
+                    <Heart className="w-4 h-4" />
+                    <span>Partage instantané</span>
+                  </div>
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                Partagez
-              </h3>
-              <p className="text-gray-600 text-center leading-relaxed">
-                Envoyez le lien unique à vos proches par email, SMS ou réseaux sociaux. 
-                C'est tout !
-              </p>
             </div>
+          </div>
+
+          {/* Quick CTA */}
+          <div className="text-center">
+            <Link 
+              href="/creer-ma-liste"
+              className="inline-flex items-center gap-3 bg-[#f79176] hover:bg-[#f57f63] text-white px-10 py-4 rounded-full hover:shadow-2xl hover:scale-105 transition-all font-bold text-lg"
+            >
+              <Gift className="w-6 h-6" />
+              Commencer maintenant
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <p className="text-sm text-gray-500 mt-4">
+              ✨ Sans carte bancaire • Gratuit pour toujours
+            </p>
           </div>
         </div>
       </section>
 
       {/* Detailed Features for Parents */}
-      <section className="bg-white py-16">
+      <section className="bg-gradient-to-b from-white via-orange-50/30 to-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Toutes les fonctionnalités en détail
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+                Toutes les fonctionnalités en détail
+              </h2>
+              <p className="text-xl text-gray-600">
+                Découvrez tout ce qui rend Tiny Tot unique
+              </p>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Multi-brand */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
-                    <ShoppingBag className="w-6 h-6 text-pink-600" />
+              <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                      <ShoppingBag className="w-7 h-7 text-orange-600" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Produits multi-marques
-                  </h3>
-                  <p className="text-gray-600">
-                    Ajoutez des produits de n'importe quelle boutique : Amazon, Bébé9, Aubert, Vertbaudet... 
-                    Plus besoin de jongler entre plusieurs listes !
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Produits multi-marques
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Ajoutez des produits de n'importe quelle boutique : Amazon, Bébé9, Aubert, Vertbaudet... 
+                      <span className="block mt-1 text-orange-600 font-medium">Plus besoin de jongler entre plusieurs listes !</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Cagnotte */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Euro className="w-6 h-6 text-blue-600" />
+              <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                      <Euro className="w-7 h-7 text-blue-600" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Cagnotte intégrée
-                  </h3>
-                  <p className="text-gray-600">
-                    Vos proches peuvent aussi contribuer financièrement. Fixez un objectif ou laissez ouvert. 
-                    Vous recevez l'argent directement sur votre compte.
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Cagnotte intégrée
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Vos proches peuvent aussi contribuer financièrement. Fixez un objectif ou laissez ouvert.
+                      <span className="block mt-1 text-blue-600 font-medium">Recevez l'argent directement sur votre compte.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Dashboard */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-purple-600" />
+              <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                      <CheckCircle className="w-7 h-7 text-amber-300" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Suivi en temps réel
-                  </h3>
-                  <p className="text-gray-600">
-                    Consultez votre dashboard pour voir qui a réservé quoi, le montant de la cagnotte, 
-                    et tous les messages de vos proches.
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Suivi en temps réel
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Consultez votre dashboard pour voir qui a réservé quoi et le montant de la cagnotte.
+                      <span className="block mt-1 text-amber-300 font-medium">Tous les messages de vos proches au même endroit.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Notifications */}
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Bell className="w-6 h-6 text-green-600" />
+              <div className="group bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                      <Bell className="w-7 h-7 text-green-600" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Notifications automatiques
-                  </h3>
-                  <p className="text-gray-600">
-                    Recevez un email à chaque réservation ou contribution. 
-                    Restez informés sans avoir à vérifier constamment.
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Notifications automatiques
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Recevez un email à chaque réservation ou contribution.
+                      <span className="block mt-1 text-green-600 font-medium">Restez informés sans avoir à vérifier constamment.</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -224,96 +269,104 @@ export default function CommentCaMarchePage() {
       </section>
 
       {/* For Guests */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-full mb-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-5 py-2.5 rounded-full mb-6 shadow-md">
               <Users className="w-5 h-5" />
-              <span className="font-semibold">Pour les invités</span>
+              <span className="font-bold">Pour les invités</span>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-5xl font-extrabold text-gray-900 mb-4">
               Offrir un cadeau, c'est simple
             </h2>
+            <p className="text-xl text-gray-600">
+              Aucune inscription requise pour participer
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <div className="space-y-6">
-                <div className="flex gap-4">
+              <div className="space-y-8">
+                <div className="flex gap-5 group">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-pink-500 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-br bg-[#f79176] hover:bg-[#f57f63] text-white rounded-2xl flex items-center justify-center font-extrabold text-lg shadow-lg group-hover:scale-110 transition-transform">
                       1
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
                       Recevez le lien
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 leading-relaxed">
                       Les futurs parents vous envoient le lien de leur liste par email, SMS ou message.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-5 group">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl flex items-center justify-center font-extrabold text-lg shadow-lg group-hover:scale-110 transition-transform">
                       2
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
                       Choisissez votre cadeau
                     </h3>
-                    <p className="text-gray-600">
-                      Parcourez la liste et sélectionnez ce qui vous plaît. Vous pouvez voir ce qui est déjà réservé.
+                    <p className="text-gray-600 leading-relaxed">
+                      Parcourez la liste et sélectionnez ce qui vous plaît. Vous voyez ce qui est déjà réservé.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-5 group">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-500 from-[#faead9] text-white rounded-2xl flex items-center justify-center font-extrabold text-lg shadow-lg group-hover:scale-110 transition-transform">
                       3
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
                       Réservez ou contribuez
                     </h3>
-                    <p className="text-gray-600">
-                      Réservez le produit pour l'acheter vous-même, ou contribuez directement à la cagnotte en quelques clics.
+                    <p className="text-gray-600 leading-relaxed">
+                      Réservez le produit pour l'acheter vous-même, ou contribuez à la cagnotte en quelques clics.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-3xl p-8">
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <h4 className="font-bold text-gray-900 mb-4 text-center">
+            <div className="bg-gradient-to-br from-orange-100 via-amber-100 to-blue-100 rounded-3xl p-8 shadow-2xl">
+              <div className="bg-white rounded-3xl p-8 shadow-xl">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                   Deux options pour offrir
                 </h4>
                 
-                <div className="space-y-4">
-                  <div className="bg-pink-50 rounded-xl p-4 border-2 border-pink-200">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Gift className="w-6 h-6 text-pink-600" />
-                      <span className="font-bold text-gray-900">Réserver un produit</span>
+                <div className="space-y-5">
+                  <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-300 shadow-md hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
+                        <Gift className="w-6 h-6 text-white" />
+                      </div>
+                      <span className="font-bold text-gray-900 text-lg">Réserver un produit</span>
                     </div>
-                    <p className="text-sm text-gray-600 ml-9">
+                    <p className="text-gray-700 ml-13">
                       Vous achetez le cadeau vous-même sur le site de la marque. 
-                      Pas de frais supplémentaires.
+                      <span className="block mt-1 font-semibold text-orange-600">✓ Pas de frais supplémentaires</span>
                     </p>
                   </div>
 
-                  <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-200">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Euro className="w-6 h-6 text-blue-600" />
-                      <span className="font-bold text-gray-900">Contribuer à la cagnotte</span>
+                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-6 border-2 border-blue-300 shadow-md hover:shadow-lg transition-shadow">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+                        <Euro className="w-6 h-6 text-white" />
+                      </div>
+                      <span className="font-bold text-gray-900 text-lg">Contribuer à la cagnotte</span>
                     </div>
-                    <p className="text-sm text-gray-600 ml-9">
+                    <p className="text-gray-700 ml-13">
                       Donnez le montant de votre choix. Les parents utilisent l'argent comme ils veulent.
+                      <span className="block mt-1 font-semibold text-blue-600">✓ Paiement sécurisé instantané</span>
                     </p>
                   </div>
                 </div>
@@ -321,66 +374,78 @@ export default function CommentCaMarchePage() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-8 text-white text-center">
-            <Heart className="w-12 h-12 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-3">
-              Pas besoin de créer un compte
-            </h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">
-              En tant qu'invité, vous pouvez consulter la liste, réserver des cadeaux et contribuer 
-              sans avoir à créer un compte. Juste votre nom et email suffisent !
-            </p>
+          <div className="bg-gradient-to-br from-blue-600 via-amber-300 to-orange-600 rounded-3xl p-10 text-white text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16 blur-3xl"></div>
+            <div className="relative">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Heart className="w-10 h-10" />
+              </div>
+              <h3 className="text-3xl font-extrabold mb-4">
+                Pas besoin de créer un compte
+              </h3>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+                En tant qu'invité, vous pouvez consulter la liste, réserver des cadeaux et contribuer 
+                sans avoir à créer un compte. <span className="font-bold underline">Juste votre nom et email suffisent !</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Security & Trust */}
-      <section className="bg-white py-16">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="mb-6">
+              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full">
+                <Shield className="w-5 h-5" />
+                <span className="text-sm font-bold">Sécurité garantie</span>
+              </div>
+            </div>
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
               Sécurisé et fiable
             </h2>
-            <p className="text-xl text-gray-600 mb-12">
+            <p className="text-xl text-gray-600 mb-16">
               Votre confiance est notre priorité
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gray-50 rounded-xl p-6">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:shadow-2xl hover:border-green-200 hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-md">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Paiements sécurisés
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Nous utilisons Stripe, leader mondial du paiement en ligne. 
+                <p className="text-gray-600 leading-relaxed">
+                  Nous utilisons <span className="font-bold text-green-600">Stripe</span>, leader mondial du paiement en ligne. 
                   Vos données bancaires sont protégées.
                 </p>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MousePointer className="w-6 h-6 text-blue-600" />
+              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:shadow-2xl hover:border-blue-200 hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-md">
+                  <Lock className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Données protégées
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Vos informations personnelles sont chiffrées et ne sont jamais partagées 
+                <p className="text-gray-600 leading-relaxed">
+                  Vos informations personnelles sont <span className="font-bold text-blue-600">chiffrées</span> et ne sont jamais partagées 
                   avec des tiers.
                 </p>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-6 h-6 text-purple-600" />
+              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:shadow-2xl hover:border-amber-200 hover:-translate-y-2 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-md">
+                  <Heart className="w-8 h-8 text-amber-300" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
                   Support réactif
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Une question ? Un problème ? Notre équipe vous répond rapidement 
+                <p className="text-gray-600 leading-relaxed">
+                  Une question ? Un problème ? Notre équipe vous répond <span className="font-bold text-amber-300">rapidement</span> 
                   par email.
                 </p>
               </div>
@@ -390,75 +455,90 @@ export default function CommentCaMarchePage() {
       </section>
 
       {/* Video Section (Placeholder) */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Voyez Minipouce en action
+      <section className="container mx-auto px-4 py-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+              Voyez Tiny Tot en action
             </h2>
             <p className="text-xl text-gray-600">
               Une démo vaut mieux que mille mots
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-3xl p-8 aspect-video flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <MousePointer className="w-10 h-10 text-pink-600" />
+          <div className="relative bg-gradient-to-br from-orange-200 via-amber-200 to-blue-200 rounded-3xl p-2 shadow-2xl">
+            <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-3xl p-8 aspect-video flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+              <div className="text-center relative z-10">
+                <div className="w-24 h-24 bg-white rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl group hover:scale-110 transition-transform cursor-pointer">
+                  <MousePointer className="w-12 h-12 text-orange-600 group-hover:text-amber-300 transition-colors" />
+                </div>
+                <p className="text-gray-800 font-bold text-lg mb-2">
+                  Vidéo de démonstration à venir
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Découvrez bientôt comment utiliser Tiny Tot en 2 minutes
+                </p>
               </div>
-              <p className="text-gray-700 font-medium">
-                Vidéo de démonstration à venir
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Quick */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gradient-to-br from-gray-50 via-white to-orange-50/30 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
-              Questions fréquentes
-            </h2>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+                Questions fréquentes
+              </h2>
+              <p className="text-lg text-gray-600">
+                Tout ce que vous devez savoir
+              </p>
+            </div>
 
-            <div className="space-y-4">
-              <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <summary className="font-bold text-gray-900 cursor-pointer">
-                  Combien de temps faut-il pour créer une liste ?
+            <div className="space-y-5">
+              <details className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:border-orange-200 hover:shadow-xl transition-all">
+                <summary className="font-bold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+                  <span>Combien de temps faut-il pour créer une liste ?</span>
+                  <span className="text-orange-500 group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="text-gray-600 mt-3">
-                  Moins de 5 minutes ! Vous pouvez créer votre liste et ajouter vos premiers produits 
+                <p className="text-gray-600 mt-4 leading-relaxed pt-4 border-t border-gray-100">
+                  <span className="font-bold text-orange-600">Moins de 5 minutes !</span> Vous pouvez créer votre liste et ajouter vos premiers produits 
                   très rapidement. Vous pourrez la compléter au fur et à mesure.
                 </p>
               </details>
 
-              <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <summary className="font-bold text-gray-900 cursor-pointer">
-                  Puis-je modifier ma liste après l'avoir partagée ?
+              <details className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all">
+                <summary className="font-bold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+                  <span>Puis-je modifier ma liste après l'avoir partagée ?</span>
+                  <span className="text-blue-500 group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="text-gray-600 mt-3">
-                  Oui, absolument ! Vous pouvez ajouter, modifier ou supprimer des produits à tout moment. 
+                <p className="text-gray-600 mt-4 leading-relaxed pt-4 border-t border-gray-100">
+                  <span className="font-bold text-blue-600">Oui, absolument !</span> Vous pouvez ajouter, modifier ou supprimer des produits à tout moment. 
                   Les changements sont visibles immédiatement pour vos proches.
                 </p>
               </details>
 
-              <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <summary className="font-bold text-gray-900 cursor-pointer">
-                  Que se passe-t-il après la naissance ?
+              <details className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:border-amber-200 hover:shadow-xl transition-all">
+                <summary className="font-bold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+                  <span>Que se passe-t-il après la naissance ?</span>
+                  <span className="text-amber-500 group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="text-gray-600 mt-3">
-                  Votre liste reste accessible aussi longtemps que vous le souhaitez. Vous pouvez la fermer, 
+                <p className="text-gray-600 mt-4 leading-relaxed pt-4 border-t border-gray-100">
+                  Votre liste reste accessible <span className="font-bold text-amber-300">aussi longtemps que vous le souhaitez</span>. Vous pouvez la fermer, 
                   l'archiver ou créer une nouvelle liste pour un autre événement.
                 </p>
               </details>
 
-              <details className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <summary className="font-bold text-gray-900 cursor-pointer">
-                  Les invités peuvent-ils voir qui a offert quoi ?
+              <details className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-100 hover:border-green-200 hover:shadow-xl transition-all">
+                <summary className="font-bold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+                  <span>Les invités peuvent-ils voir qui a offert quoi ?</span>
+                  <span className="text-green-500 group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="text-gray-600 mt-3">
-                  Non, par défaut seuls les parents voient qui a réservé ou contribué. 
+                <p className="text-gray-600 mt-4 leading-relaxed pt-4 border-t border-gray-100">
+                  <span className="font-bold text-green-600">Non</span>, par défaut seuls les parents voient qui a réservé ou contribué. 
                   Cela évite la comparaison entre invités et préserve la surprise.
                 </p>
               </details>
@@ -468,71 +548,144 @@ export default function CommentCaMarchePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Prêt à commencer ?
-          </h2>
-          <p className="text-xl text-gray-600 mb-10">
-            Créez votre liste de naissance en quelques minutes
-          </p>
-          <Link 
-            href="/creer-ma-liste"
-            className="inline-flex items-center gap-2 bg-pink-500 text-white px-10 py-4 rounded-full hover:bg-pink-600 transition font-bold text-lg shadow-lg"
-          >
-            <Gift className="w-6 h-6" />
-            Créer ma liste gratuitement
-          </Link>
-          <p className="text-sm text-gray-500 mt-4">
-            Aucune carte bancaire requise • Gratuit pour toujours
-          </p>
+      <section className="container mx-auto px-4 py-24">
+        <div className="max-w-4xl mx-auto relative">
+          <div className="bg-[#f79176] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-32 -translate-y-32 blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-32 translate-y-32 blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="w-10 h-10 animate-pulse" />
+              </div>
+              
+              <h2 className="text-5xl font-extrabold mb-6">
+                Prêt à commencer ?
+              </h2>
+              
+              <p className="text-2xl text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
+                Créez votre liste de naissance en quelques minutes et simplifiez-vous la vie
+              </p>
+              
+              <Link 
+                href="/creer-ma-liste"
+                className="inline-flex items-center gap-3 bg-white text-gray-900 px-12 py-5 rounded-full hover:scale-105 hover:shadow-2xl transition-all font-extrabold text-xl group"
+              >
+                <Gift className="w-7 h-7 text-orange-500 group-hover:rotate-12 transition-transform" />
+                Créer ma liste gratuitement
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <div className="mt-8 flex items-center justify-center gap-6 text-white/90">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-medium">Sans carte bancaire</span>
+                </div>
+                <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-medium">Gratuit pour toujours</span>
+                </div>
+                <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-medium">Multi-marques</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-gray-50">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="border-t bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Baby className="w-6 h-6 text-pink-500" />
-                <span className="text-xl font-bold text-gray-900">Minipouce</span>
-              </div>
-              <p className="text-gray-600 text-sm">
+              <Link href="/" className="flex items-center gap-2 mb-4 group">
+                <Baby className="w-7 h-7 text-orange-500 group-hover:scale-110 transition-transform" />
+                <span className="text-xl font-bold bg-gradient-to-r from-[#fcead8] from-[#faead9] bg-clip-text text-transparent">
+                  Tiny Tot
+                </span>
+              </Link>
+              <p className="text-gray-600 leading-relaxed mb-4">
                 La plateforme de listes de naissance qui simplifie la vie des futurs parents.
               </p>
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-gray-500">Créé avec ❤️ en France</span>
+              </div>
             </div>
             
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Produit</h4>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/fonctionnalites" className="hover:text-pink-600">Fonctionnalités</Link></li>
-                <li><Link href="/tarifs" className="hover:text-pink-600">Tarifs</Link></li>
-                <li><Link href="/demo" className="hover:text-pink-600">Démo</Link></li>
+              <h4 className="font-bold text-gray-900 mb-5 text-lg">Produit</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/fonctionnalites" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Fonctionnalités</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tarifs" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Tarifs</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/demo" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Démo</span>
+                  </Link>
+                </li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Entreprise</h4>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/a-propos" className="hover:text-pink-600">À propos</Link></li>
-                <li><Link href="/partenaires" className="hover:text-pink-600">Devenir partenaire</Link></li>
-                <li><Link href="/contact" className="hover:text-pink-600">Contact</Link></li>
+              <h4 className="font-bold text-gray-900 mb-5 text-lg">Entreprise</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/a-propos" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">À propos</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partenaires" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Devenir partenaire</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Contact</span>
+                  </Link>
+                </li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold text-gray-900 mb-4">Légal</h4>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/mentions-legales" className="hover:text-pink-600">Mentions légales</Link></li>
-                <li><Link href="/cgv" className="hover:text-pink-600">CGV</Link></li>
-                <li><Link href="/confidentialite" className="hover:text-pink-600">Confidentialité</Link></li>
+              <h4 className="font-bold text-gray-900 mb-5 text-lg">Légal</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/mentions-legales" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Mentions légales</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cgv" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">CGV</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/confidentialite" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
+                    <span className="group-hover:translate-x-1 transition-transform">Confidentialité</span>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t mt-8 pt-8 text-center text-gray-600 text-sm">
-            <p>&copy; 2025 Minipouce. Tous droits réservés.</p>
+          <div className="border-t border-gray-200 pt-8 text-center">
+            <p className="text-gray-600 font-medium">
+              &copy; 2025 <span className="font-bold text-orange-600">Tiny Tot</span>. Tous droits réservés.
+            </p>
           </div>
         </div>
       </footer>

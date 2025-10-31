@@ -1,49 +1,22 @@
 import Link from "next/link"
 import { Baby, Check, X, Sparkles, Gift, Euro, Users, Crown, Zap } from "lucide-react"
+import Navbar from "@/components/Navbar"
 
 export default function TarifsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-blue-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Baby className="w-8 h-8 text-pink-500" />
-            <span className="text-2xl font-bold text-gray-900">Minipouce</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/fonctionnalites" className="text-gray-600 hover:text-pink-600 transition">
-              Fonctionnalités
-            </Link>
-            <Link href="/comment-ca-marche" className="text-gray-600 hover:text-pink-600 transition">
-              Comment ça marche
-            </Link>
-            <Link href="/tarifs" className="text-pink-600 font-medium">
-              Tarifs
-            </Link>
-            <Link href="/auth/signin" className="text-gray-600 hover:text-pink-600 transition">
-              Connexion
-            </Link>
-            <Link 
-              href="/creer-ma-liste" 
-              className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition font-medium"
-            >
-              Créer ma liste
-            </Link>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-orange-50">
+      <Navbar />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-pink-100 text-pink-700 px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-6">
             <Sparkles className="w-4 h-4" />
             <span className="text-sm font-medium">Transparent et sans surprise</span>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Une tarification simple et <span className="text-pink-600">équitable</span>
+            Une tarification simple et <span className="text-orange-600">équitable</span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
@@ -59,7 +32,7 @@ export default function TarifsPage() {
           <div className="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 relative">
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
-                <Gift className="w-6 h-6 text-pink-500" />
+                <Gift className="w-6 h-6 text-orange-500" />
                 <h3 className="text-2xl font-bold text-gray-900">Gratuit</h3>
               </div>
               <div className="flex items-baseline gap-2 mb-2">
@@ -70,14 +43,14 @@ export default function TarifsPage() {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm text-gray-700 bg-pink-50 p-3 rounded-lg">
+              <p className="text-sm text-gray-700 bg-orange-50 p-3 rounded-lg">
                 <strong>Commission cagnotte :</strong> 4% + frais de paiement
               </p>
             </div>
 
             <Link
               href="/creer-ma-liste"
-              className="block w-full bg-pink-500 text-white py-3 rounded-full hover:bg-pink-600 transition font-semibold text-center mb-8"
+              className="block w-full bg-[#f79176] text-white hover:bg-[#f57f63] transition font-semibold text-center mb-8"
             >
               Commencer gratuitement
             </Link>
@@ -117,14 +90,14 @@ export default function TarifsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Branding Minipouce</span>
+                  <span className="text-gray-700">Branding Tiny Tot</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-gradient-to-br from-pink-500 to-purple-600 rounded-3xl shadow-2xl p-8 relative transform scale-105 border-4 border-pink-400">
+          <div className="bg-gradient-to-br from-orange-500 from-[#faead9] rounded-3xl shadow-2xl p-8 relative transform scale-105 border-4 border-orange-400">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <div className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                 <Crown className="w-4 h-4" />
@@ -139,9 +112,9 @@ export default function TarifsPage() {
               </div>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-5xl font-bold">10€</span>
-                <span className="text-pink-100">/mois</span>
+                <span className="text-orange-100">/mois</span>
               </div>
-              <p className="text-pink-100">ou 80€/an (2 mois offerts)</p>
+              <p className="text-orange-100">ou 80€/an (2 mois offerts)</p>
             </div>
 
             <div className="mb-8">
@@ -152,7 +125,7 @@ export default function TarifsPage() {
 
             <button
               disabled
-              className="block w-full bg-white text-pink-600 py-3 rounded-full font-bold text-center mb-8 opacity-75 cursor-not-allowed"
+              className="block w-full bg-white text-orange-600 py-3 rounded-full font-bold text-center mb-8 opacity-75 cursor-not-allowed"
             >
               Bientôt disponible
             </button>
@@ -176,7 +149,7 @@ export default function TarifsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <span>Sans branding Minipouce</span>
+                  <span>Sans branding Tiny Tot</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 flex-shrink-0 mt-0.5" />
@@ -202,7 +175,7 @@ export default function TarifsPage() {
           <div className="bg-white rounded-3xl shadow-lg border-2 border-gray-100 p-8 relative">
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
-                <Zap className="w-6 h-6 text-purple-500" />
+                <Zap className="w-6 h-6 text-amber-500" />
                 <h3 className="text-2xl font-bold text-gray-900">Entreprise</h3>
               </div>
               <div className="flex items-baseline gap-2 mb-2">
@@ -212,7 +185,7 @@ export default function TarifsPage() {
             </div>
 
             <div className="mb-8">
-              <p className="text-sm text-gray-700 bg-purple-50 p-3 rounded-lg">
+              <p className="text-sm text-gray-700 bg-amber-50 p-3 rounded-lg">
                 <strong>Solution sur-mesure</strong> adaptée à vos besoins
               </p>
             </div>
@@ -280,9 +253,9 @@ export default function TarifsPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 mb-8">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 mb-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <Euro className="w-6 h-6 text-pink-500" />
+                <Euro className="w-6 h-6 text-orange-500" />
                 Exemple de contribution
               </h3>
               
@@ -292,14 +265,14 @@ export default function TarifsPage() {
                   <span className="text-2xl font-bold text-gray-900">100€</span>
                 </div>
                 
-                <div className="flex items-center justify-between p-4 bg-pink-50 rounded-lg">
-                  <span className="text-gray-700">Commission Minipouce (4%)</span>
-                  <span className="text-lg font-semibold text-pink-600">- 4€</span>
+                <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
+                  <span className="text-gray-700">Commission Tiny Tot (4%)</span>
+                  <span className="text-lg font-semibold text-orange-600">- 4€</span>
                 </div>
                 
-                <div className="flex items-center justify-between p-4 bg-pink-50 rounded-lg">
+                <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
                   <span className="text-gray-700">Frais de paiement Stripe</span>
-                  <span className="text-lg font-semibold text-pink-600">- 0.30€</span>
+                  <span className="text-lg font-semibold text-orange-600">- 0.30€</span>
                 </div>
                 
                 <div className="border-t-2 border-gray-200 pt-4">
@@ -327,9 +300,9 @@ export default function TarifsPage() {
                 </p>
               </div>
 
-              <div className="bg-purple-50 rounded-xl p-6">
+              <div className="bg-amber-50 rounded-xl p-6">
                 <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                  <Gift className="w-5 h-5 text-purple-500" />
+                  <Gift className="w-5 h-5 text-amber-500" />
                   Pourquoi une commission ?
                 </h4>
                 <p className="text-gray-700">
@@ -404,18 +377,18 @@ export default function TarifsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-pink-500 to-purple-600 py-16">
+      <section className="bg-gradient-to-r from-orange-500 from-[#faead9] py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto text-white">
             <h2 className="text-4xl font-bold mb-6">
               Prêt à créer votre liste ?
             </h2>
-            <p className="text-xl text-pink-100 mb-10">
+            <p className="text-xl text-orange-100 mb-10">
               Commencez gratuitement, sans carte bancaire
             </p>
             <Link
               href="/creer-ma-liste"
-              className="inline-flex items-center gap-2 bg-white text-pink-600 px-10 py-4 rounded-full hover:bg-pink-50 transition font-bold text-lg"
+              className="inline-flex items-center gap-2 bg-white text-orange-600 px-10 py-4 rounded-full hover:bg-orange-50 transition font-bold text-lg"
             >
               <Gift className="w-6 h-6" />
               Créer ma liste gratuitement
@@ -430,8 +403,8 @@ export default function TarifsPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Baby className="w-6 h-6 text-pink-500" />
-                <span className="text-xl font-bold text-gray-900">Minipouce</span>
+                <Baby className="w-6 h-6 text-orange-500" />
+                <span className="text-xl font-bold text-gray-900">Tiny Tot</span>
               </div>
               <p className="text-gray-600 text-sm">
                 La plateforme de listes de naissance qui simplifie la vie des futurs parents.
@@ -441,33 +414,33 @@ export default function TarifsPage() {
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Produit</h4>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/fonctionnalites" className="hover:text-pink-600">Fonctionnalités</Link></li>
-                <li><Link href="/tarifs" className="hover:text-pink-600">Tarifs</Link></li>
-                <li><Link href="/demo" className="hover:text-pink-600">Démo</Link></li>
+                <li><Link href="/fonctionnalites" className="hover:text-orange-600">Fonctionnalités</Link></li>
+                <li><Link href="/tarifs" className="hover:text-orange-600">Tarifs</Link></li>
+                <li><Link href="/demo" className="hover:text-orange-600">Démo</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Entreprise</h4>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/a-propos" className="hover:text-pink-600">À propos</Link></li>
-                <li><Link href="/partenaires" className="hover:text-pink-600">Devenir partenaire</Link></li>
-                <li><Link href="/contact" className="hover:text-pink-600">Contact</Link></li>
+                <li><Link href="/a-propos" className="hover:text-orange-600">À propos</Link></li>
+                <li><Link href="/partenaires" className="hover:text-orange-600">Devenir partenaire</Link></li>
+                <li><Link href="/contact" className="hover:text-orange-600">Contact</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold text-gray-900 mb-4">Légal</h4>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li><Link href="/mentions-legales" className="hover:text-pink-600">Mentions légales</Link></li>
-                <li><Link href="/cgv" className="hover:text-pink-600">CGV</Link></li>
-                <li><Link href="/confidentialite" className="hover:text-pink-600">Confidentialité</Link></li>
+                <li><Link href="/mentions-legales" className="hover:text-orange-600">Mentions légales</Link></li>
+                <li><Link href="/cgv" className="hover:text-orange-600">CGV</Link></li>
+                <li><Link href="/confidentialite" className="hover:text-orange-600">Confidentialité</Link></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-gray-600 text-sm">
-            <p>&copy; 2025 Minipouce. Tous droits réservés.</p>
+            <p>&copy; 2025 Tiny Tot. Tous droits réservés.</p>
           </div>
         </div>
       </footer>

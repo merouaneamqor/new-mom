@@ -1,10 +1,10 @@
-# Minipouce - Plateforme de Listes de Naissance
+# Tiny Tot - Plateforme de Listes de Naissance
 
 Une plateforme moderne et flexible pour créer et gérer des listes de naissance avec cagnotte intégrée.
 
 ## 🎯 Proposition de Valeur
 
-Minipouce se positionne comme une plateforme innovante de listes de naissance avec :
+Tiny Tot se positionne comme une plateforme innovante de listes de naissance avec :
 
 - **Multi-marques** : Centralisez des produits de plusieurs enseignes sur une seule liste
 - **Cagnotte intégrée** : Permettez aux proches de participer financièrement
@@ -271,7 +271,7 @@ npm run db:studio
 
 ## 📄 License
 
-Propriétaire - Minipouce © 2025
+Propriétaire - Tiny Tot © 2025
 
 ## 📞 Contact
 
